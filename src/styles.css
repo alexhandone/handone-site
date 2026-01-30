@@ -154,7 +154,6 @@ section {
   opacity: 0;
   transform: translateY(-12px);
   pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
   z-index: 15;
 }
 
@@ -167,12 +166,6 @@ section {
   display: none;
   padding: 10px 18px;
   font-size: 0.95rem;
-}
-
-.site-header.menu-open .mobile-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
 }
 
 .site-header .nav,
@@ -392,6 +385,7 @@ section {
   justify-content: space-between;
   border: 1px solid rgba(31, 29, 26, 0.08);
   box-shadow: 0 8px 20px rgba(6, 26, 74, 0.1);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .shot span {
@@ -432,6 +426,7 @@ section {
   padding: 24px;
   box-shadow: var(--shadow);
   border: 1px solid rgba(31, 29, 26, 0.08);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .card-index {
@@ -476,6 +471,38 @@ section {
   background: rgba(0, 98, 255, 0.1);
   padding: 18px;
   border-radius: 16px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.shot:hover,
+.card:hover,
+.service-card:hover,
+.mini-card:hover {
+  background: linear-gradient(135deg, #0062ff 0%, #3a8bff 100%);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.shot:hover span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .card-index,
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover li,
+.mini-card:hover h3,
+.mini-card:hover p {
+  color: var(--white);
+}
+
+.service-card:hover ul li::before {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-card:hover .ghost {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--white);
 }
 
 .services .service-card ul {
@@ -588,17 +615,6 @@ section {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 @media (max-width: 960px) {
