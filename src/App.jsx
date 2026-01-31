@@ -107,8 +107,8 @@ const App = () => {
         <motion.section className="hero" variants={stagger} initial="hidden" animate="show">
           <div className="hero-content">
             <motion.p className="eyebrow" variants={fadeUp}>Agencia de criacao de sites</motion.p>
-            <motion.h1 variants={fadeUp}>Sites unicos que comunicam seu valor e convertem.</motion.h1>
-            <motion.p className="lead" variants={fadeUp}>Unimos design autoral, estrategia e performance para criar experiencias digitais rapidas, belas e prontas para crescer com o seu negocio.</motion.p>
+            <motion.h1 variants={fadeUp}>Soluções digitais sob medida </motion.h1>
+            <motion.p className="lead" variants={fadeUp}>Parceiros oficiais da Nuvemshop, especialistas em transformar ideias em negócios digitais prontos para escalar.</motion.p>
             <motion.div className="hero-actions" variants={fadeUp}>
               <a className="cta" href="#contato">Quero gerar impacto</a>
               <a className="ghost" href="#portfolio">Ver portfolio</a>
